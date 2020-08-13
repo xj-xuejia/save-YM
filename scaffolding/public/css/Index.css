@@ -1,0 +1,46 @@
+/* 
+引与Index.vue
+
+*/
+
+/* 主页时间样式 */
+#time {
+  float: left;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* 主页福利入口图标样式 */
+#fuli img {
+  margin-top: 11px;
+  float: right;
+  width: 25px;
+}
+
+/* 主页轮播图占位样式 */
+#lunbo img {
+  margin: 10px 0;
+  width: 100%;
+}
+
+/* 修改选项卡的字体大小 */
+#go .mint-tab-item-label {
+  font-size: 14px !important;
+}
+
+/* 修改每个选项卡之间的内边距 */
+.mint-navbar .mint-tab-item {
+  padding: 17px 9px;
+  font-size: 15px;
+}
+
+/* 修改每个选项卡的宽度 */
+#go .mint-tab-item-label {
+  width: 53px;
+}
+
+/* 修改每个选项中的左右内边距 */
+/*#go .mint-navbar .mint-tab-item {
+  padding: 17px 16px !important;
+  font-size: 15px !important;
+}*/
