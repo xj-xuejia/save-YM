@@ -1,10 +1,9 @@
 <template>
-  <div id="pingbao">
-    <div>
+  <div>
+    <div class="top">
       <!-- 声音页面导航信息开始 -->
       <div id="first">声音</div>
       <img class="play" src="../../public/resource/music_red.png" alt />
-      <!-- 声音页面导航信息结束 -->
       <!-- 顶部选项卡开始 -->
       <mt-navbar v-model="active">
         <mt-tab-item id="1">雨声</mt-tab-item>
@@ -15,30 +14,69 @@
       </mt-navbar>
       <!-- 顶部选项卡结束 -->
     </div>
+    <!-- 声音页面导航信息结束 -->
     <!-- 面板区域开始 -->
-    <div>
-      <mt-tab-container v-model="active">
-        <mt-tab-container-item id="1" style="border:2px solid red">
-          <img class="tu" src="../../public/resource/music_gray.png" alt />
-          <!-- 歌曲名 -->
-          <span class="musicname">都市夜雨</span>
-          <br />
-          <!-- 名字 -->
-          <span class="biaoqian">冥想放空</span>
-          <img class="push" src="../../public/resource/play.png" alt />
-          <hr />
+    <div id="poser">
+      <mt-tab-container v-model="active" swipeable>
+        <mt-tab-container-item id="1">
+          <div v-for="(v,k) of 50" :key="k">
+            <img class="tu" src="../../public/resource/music_gray.png" alt />
+            <!-- 歌曲名 -->
+            <span class="musicname">都市夜雨</span>
+            <br />
+            <!-- 名字 -->
+            <span class="biaoqian">冥想放空</span>
+            <img class="push" src="../../public/resource/play.png" alt />
+            <hr />
+          </div>
         </mt-tab-container-item>
         <mt-tab-container-item id="2">
-          <p>ABCDE</p>
+          <div v-for="(v,k) of 50" :key="k">
+            <img class="tu" src="../../public/resource/music_gray.png" alt />
+            <!-- 歌曲名 -->
+            <span class="musicname">都市夜雨</span>
+            <br />
+            <!-- 名字 -->
+            <span class="biaoqian">冥想放空</span>
+            <img class="push" src="../../public/resource/play.png" alt />
+            <hr />
+          </div>
         </mt-tab-container-item>
         <mt-tab-container-item id="3">
-          <p>中华人民共和国</p>
+          <div v-for="(v,k) of 50" :key="k">
+            <img class="tu" src="../../public/resource/music_gray.png" alt />
+            <!-- 歌曲名 -->
+            <span class="musicname">都市夜雨</span>
+            <br />
+            <!-- 名字 -->
+            <span class="biaoqian">冥想放空</span>
+            <img class="push" src="../../public/resource/play.png" alt />
+            <hr />
+          </div>
         </mt-tab-container-item>
         <mt-tab-container-item id="4">
-          <p>This a test</p>
+          <div v-for="(v,k) of 50" :key="k">
+            <img class="tu" src="../../public/resource/music_gray.png" alt />
+            <!-- 歌曲名 -->
+            <span class="musicname">都市夜雨</span>
+            <br />
+            <!-- 名字 -->
+            <span class="biaoqian">冥想放空</span>
+            <img class="push" src="../../public/resource/play.png" alt />
+            <hr />
+          </div>
         </mt-tab-container-item>
         <mt-tab-container-item id="5">
-          <p>This a one</p>
+          <div v-for="(v,k) of 50" :key="k">
+            <img class="tu" src="../../public/resource/music_gray.png" alt />
+            <!-- 歌曲名 -->
+            <span class="musicname">都市夜雨</span>
+            <br />
+            <!-- 名字 -->
+            <span class="biaoqian">冥想放空</span>
+            <img class="push" src="../../public/resource/play.png" alt />
+            <hr />
+          </div>
         </mt-tab-container-item>
       </mt-tab-container>
       <!-- 面板区域结束 -->
@@ -55,19 +93,29 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
+#poser {
+  margin-top: 30px;
+}
+.top {
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  margin-top: -2rem;
+}
 /* 顶部选项卡容器 */
 .mint-navbar {
-  padding: 0 2rem 0;
+  clear: both;
   color: grey;
-  width: 88%;
-  margin: 0 0 0 -0.3em;
+  margin: 0 0.6rem 0 -0.6em;
 }
 /*声音页面导航信息 */
 #first {
+  /* position: fixed; */
   margin-left: 1rem;
   margin-top: 2rem;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
 }
 /* 顶部选项卡触发信息 */
@@ -83,7 +131,7 @@ export default {
   width: 26px;
   height: 3px;
   background-color: red;
-  margin: 0 auto;
+  margin: 0.2rem auto 0;
 }
 /* 顶部选项卡位置调整 */
 .mint-navbar {
@@ -91,48 +139,53 @@ export default {
 }
 
 /* 顶部选项卡字体样式调整 */
-.mint-tab-item-label {
-  padding-bottom: 8px;
-  font-size: 15px !important;
+.mint-tab-item-label .mint-tab-item {
+  font-size: 20px !important;
 }
 /* 顶部播放键位置 */
 .play {
-  position: absolute;
-  top: 18px;
-  right: 1em;
+  float: right;
+  margin-bottom: 0.6rem;
+  margin-top: -2rem;
+  margin-right: 1rem;
 }
 /* 音乐图 */
 .tu {
-  margin-top: 3px;
+  margin: 0.4rem;
   float: left;
-  width: 51px;
+  width: 3.5rem;
   clear: both;
 }
 /* 标签 */
 .biaoqian {
   float: left;
-  margin-left: -91px;
-  margin-top: 16px;
+  margin: -0.5rem 0 0 0.2rem;
   color: gray;
   font-size: 10px;
-  padding: 3px;
   border: 1px solid gray;
+  display: block;
 }
 /* 歌曲名字 */
 .musicname {
-  margin-left: 20px;
-  font-size: 23px;
-  float: left;
+  font-weight: bold;
+  padding: 1rem 1rem 0 1rem;
+  display: block;
 }
 /* 音乐控制键 */
 .push {
-  width: 8%;
+  width: 2rem;
   float: right;
-  margin-right: 5px;
-  margin-top: -6px;
+  margin-right: 1.4rem;
+  margin-top: -2rem;
 }
 hr {
   clear: both;
-  margin: 43px 5px 0 50px;
+  margin: 1rem 0 0 5rem;
+}
+.mint-tab-container-item {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: 6.3rem;
 }
 </style>
