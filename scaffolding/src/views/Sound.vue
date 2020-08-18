@@ -94,9 +94,19 @@ export default {
 };
 </script>
 <style scoped>
-#poser {
-  margin-top: 30px;
+/*声音页面导航信息 */
+#first {
+  /* position: fixed; */
+  margin-left: 1rem;
+  margin-top: 2rem;
+  font-size: 24px;
+  font-weight: bold;
 }
+/* 顶部区域规划 */
+#poser {
+  margin-top: 2rem;
+}
+/* 顶部固定栏区域信息 */
 .top {
   background-color: #fff;
   width: 100%;
@@ -109,14 +119,6 @@ export default {
   clear: both;
   color: grey;
   margin: 0 0.6rem 0 -0.6em;
-}
-/*声音页面导航信息 */
-#first {
-  /* position: fixed; */
-  margin-left: 1rem;
-  margin-top: 2rem;
-  font-size: 24px;
-  font-weight: bold;
 }
 /* 顶部选项卡触发信息 */
 .mint-navbar .mint-tab-item.is-selected {
@@ -178,14 +180,13 @@ export default {
   margin-right: 1.4rem;
   margin-top: -2rem;
 }
+/* 面板区域分支实名间隔 */
 hr {
   clear: both;
   margin: 1rem 0 0 5rem;
 }
+/* 顶部选项卡区域与面板区域之间间隙位置 */
 .mint-tab-container-item {
-  -ms-flex-negative: 0;
-  flex-shrink: 0;
-  width: 100%;
   margin-top: 6.3rem;
 }
 </style>
